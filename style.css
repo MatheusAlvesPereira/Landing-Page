@@ -3,19 +3,12 @@
 :root{
     --title-bg-color: #D8F3DC;
     --background-color: #52B788;
-    --title-font: 
+    --title-font: 'Arimo', sans-serif;
 }
 
 *{
     margin: 0;
     padding: 0;
-}
-
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: var(--background-color);
 }
 
 a{
@@ -27,3 +20,12 @@ a:hover{
     color: var(#D8F3DC);
     opacity: 0.7;
 }
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--background-color);
+    height: 8vh;
+    font-family: var(--title-font);
+}   

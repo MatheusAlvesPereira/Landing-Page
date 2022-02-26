@@ -1,5 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;1,700&family=Inter&family=Poppins:wght@400;500;600&display=swap');
 
 :root{
-    --title-bg-color: #fff;
+    --title-bg-color: #D8F3DC;
+    --background-color: #52B788;
+    --title-font: 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+a{
+    color: var(--title-bg-color);
+    transition: 0.3s;
+}
+
+a:hover{
+    color: var(#D8F3DC);
+    opacity: 0.7;
 }

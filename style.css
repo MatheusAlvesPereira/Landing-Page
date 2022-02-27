@@ -10,6 +10,7 @@
     --button-right-color: #212529;
     --hover-width: 75%;
     --other-width: 25%;
+    --transition-animation: 1000ms;
 }
 
 *{
@@ -28,15 +29,14 @@ body{
 }
 
 .img_left{
-    width: 1000px;
+    width: 2000px;
     height: 1000px;
 }
 
 .img_right{
-    width: 1000px;
+    width: 2000px;
     height: 1000px;
 }
-
 
 a{
     color: var(--title-bg-color);
@@ -150,7 +150,7 @@ a:hover{
 .right_container,
 .right_container::before,
 .left_container::before{
-    
+    transition:var(--transition-animation);
 }
 
 .hover-left .left_container{

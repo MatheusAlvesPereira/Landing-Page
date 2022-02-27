@@ -4,8 +4,12 @@
     --title-bg-color: #D8F3DC;
     --title-font: 'Arimo', sans-serif;
     --title-font-size: 4rem;
-    --background-color: #2D6A4F;
-    --nav-color: #52B788;
+    --img-bg-left:#35008b63;
+    --img-bg-right: #ff00aa50;
+    --button-left-color: #212529;
+    --button-right-color: #212529;
+    --hover-width: 75%;
+    --other-width: 25%;
 }
 
 *{
@@ -13,11 +17,26 @@
     padding: 0;
 }
 
+h1{
+    font-family: var(--title-font);
+}
+
 body{
     height: 100vh;
     overflow: hidden;
     margin: 0;
 }
+
+.img_left{
+    width: 1000px;
+    height: 1000px;
+}
+
+.img_right{
+    width: 1000px;
+    height: 1000px;
+}
+
 
 a{
     color: var(--title-bg-color);
@@ -27,6 +46,18 @@ a{
 a:hover{
     color: var(#D8F3DC);
     opacity: 0.7;
+}
+
+.button_left:hover{
+    transition: 0.5s;
+    background-color: var(--button-left-color);
+    border-color: var(--title-bg-color);
+}
+
+.button_right:hover{
+    transition: 0.5s;
+    background-color: var(--button-right-color);
+    border-color: var(--title-bg-color);
 }
 
 .title_left,
@@ -64,14 +95,10 @@ a:hover{
     padding: 1.5rem;
 }
 
-.button_right{
+.button_right,
+.button_left{
     border: black solid 0.2rem;
     color: black;
-    transform: translateX(-50%);
-}
-
-.button_left{
-    border: var(--title-bg-color) solid 0.2rem;
     transform: translateX(-50%);
 }
 
@@ -86,7 +113,6 @@ a:hover{
     left: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    border-style: none;
 }
 
 .right_container{
@@ -102,4 +128,56 @@ a:hover{
     border-radius: none;
     display: flex;
     overflow: hidden;
+}
+
+.left_container::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--img-bg-left);
+}
+
+.right_container::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--img-bg-right);
+}
+
+.left_container,
+.right_container,
+.right_container::before,
+.left_container::before{
+    
+}
+
+.hover-left .left_container{
+    width: var(--hover-width);
+}
+
+.hover-left .right_container{
+    width: var(--other-width);
+}
+
+.hover-right .right_container{
+    width: var(--hover-width);
+}
+
+.hover-right .left_container{
+    width: var(--other-width);
+}
+
+footer{
+    position: absolute;
+    font-family: var(--title-font);
+    font-size: 10px;
+    bottom: 8px;
+    width: 100%;
+    height: 15px;
+}
+
+.footer_description{
+    color: var(--title-bg-color);
 }

@@ -169,6 +169,19 @@ a:hover{
     width: var(--other-width);
 }
 
+@media (max-width: 800px){
+    h1{
+        font-size: 2rem;
+        top: 30%;
+    }
+
+    .button_left,
+    .button_right{
+        padding: 1.2rem;
+        width: 12rem;
+    }
+}
+
 footer{
     position: absolute;
     font-family: var(--title-font);
